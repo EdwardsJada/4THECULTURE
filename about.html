@@ -4,25 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | 4THECULTURE</title>
-  
+
   <!-- Inter font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
-  
+
   <style>
-    /* Reset & basics */
     * {
       box-sizing: border-box;
     }
-    
+
     html, body {
       margin: 0;
       padding: 0;
-      background-color: white;
-      font-family: 'Inter', sans-serif;
-      color: black;
       height: 100%;
+      font-family: 'Inter', sans-serif;
+      background-color: white;
+      color: black;
     }
-    
+
     /* Header/Nav */
     header {
       position: fixed;
@@ -37,7 +36,7 @@
       z-index: 10;
       border-bottom: 1px solid #ccc;
     }
-    
+
     .nav-left a {
       color: black;
       font-weight: 600;
@@ -46,12 +45,12 @@
       letter-spacing: 1px;
       font-size: 21.5px;
     }
-    
+
     .nav-right {
       display: flex;
       gap: 30px;
     }
-    
+
     .nav-right a {
       color: black;
       font-weight: 600;
@@ -60,47 +59,49 @@
       letter-spacing: 1px;
       font-size: 21.5px;
     }
-    
+
     /* Main container */
     main.container {
-      padding-top: 80px; /* to avoid nav overlap */
-      max-width: 700px;
+      padding-top: 120px; /* Offset for fixed nav */
       margin: 0 auto;
       padding-left: 20px;
       padding-right: 20px;
     }
-    
-    /* Hero Section */
+
+    /* Hero title */
     .hero h1 {
       font-size: 3rem;
       font-weight: 900;
-      margin-bottom: 0.5em;
       text-transform: uppercase;
       text-align: center;
+      margin-bottom: 1em;
     }
-    
-    .hero p.lead {
+
+    /* Wider tagline */
+    .wide-intro {
+      max-width: 900px;
+      margin: 0 auto 2em auto;
+      text-align: center;
+    }
+
+    .wide-intro .tagline {
       font-size: 1.5rem;
       font-weight: 600;
-      color: black;
-      margin-top: 0;
-      margin-bottom: 1.5em;
+      line-height: 1.6;
+      margin: 0 auto;
+    }
+
+    /* Wider paragraph block */
+    .wide-paragraphs {
+      max-width: 1000px;
+      margin: 0 auto;
       text-align: center;
     }
-    
-    /* Centered paragraph below hero */
-    .centered-text {
-      text-align: center;
-      font-size: 1.1rem;
-      color: black;
-      margin-bottom: 1.5em;
 
-    /* Paragraph styling */
-    section > p {
+    .wide-paragraphs p {
       font-size: 1.15rem;
       line-height: 1.7;
-      color: black;
-      margin-bottom: 1.5em;
+      margin-bottom: 1.8em;
     }
 
     /* Footer */
@@ -112,12 +113,11 @@
       margin-top: 60px;
       font-size: 0.8rem;
     }
-    
+
     .footer-small {
       margin-top: 10px;
       font-size: 0.8rem;
     }
-      
   </style>
 </head>
 
@@ -136,10 +136,13 @@
   <main class="container">
     <section class="hero">
       <h1>ABOUT 4THECULTURE</h1>
-      <p class="lead">FOR THE ICONS. FOR THE INFLUENCE. FOR THE IMPACT. 4THECULTURE.</p>
     </section>
 
-    <section>
+    <section class="wide-intro">
+      <p class="tagline">FOR THE ICONS. FOR THE INFLUENCE. FOR THE IMPACT. 4THECULTURE.</p>
+    </section>
+
+    <section class="wide-paragraphs">
       <p>
         4THECULTURE is a digital space created to honor and uplift the Black artists who have shaped music, challenged norms, and redefined culture. This platform exists to spotlight not just their creative achievements, but their social impact, business ventures, activism, and ongoing influence in communities around the world.
       </p>
@@ -156,7 +159,10 @@
 
   <footer>
     <div>4THECULTURE</div>
-    <div class="footer-small">Follow us on Instagram, X (Twitter), and Facebook — Social Media: @4THECULTURE | Email: info@4theculture.com</p></div>
+    <div class="footer-small">
+      Follow us on Instagram, X (Twitter), and Facebook — Social Media: @4THECULTURE |
+      Email: info@4theculture.com
+    </div>
   </footer>
 </body>
 </html>

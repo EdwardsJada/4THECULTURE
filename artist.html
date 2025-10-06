@@ -83,7 +83,6 @@
 
     .rihanna-section {
       text-align: left;
-      max-width: 520px;
       margin-bottom: 80px;
     }
 
@@ -91,7 +90,6 @@
       max-width: 520px;
     }
 
-    /* Consistent, larger font sizes for all */
     .artist-text h2,
     .rihanna-section h2 {
       margin-top: 0;
@@ -141,31 +139,26 @@
 
     .rihanna-images {
       display: flex;
+      flex-direction: column;
       gap: 12px;
       margin-top: 16px;
       margin-bottom: 1rem;
     }
 
     .rihanna-images img {
-      width: 200px;
-      height: 130px;
       object-fit: cover;
       border-radius: 6px;
     }
 
-    /* Override size for Rihanna's first and second images */
     .rihanna-images img:first-child {
       width: 1300px;
       height: 870px;
-      object-fit: cover;
-      border-radius: 6px;
     }
 
-    .rihanna-images img:nth-child(2) {
+    .rihanna-images img:nth-child(2),
+    .rihanna-images img:nth-child(3) {
       width: 650px;
       height: 435px;
-      object-fit: cover;
-      border-radius: 6px;
     }
 
     footer {
@@ -265,7 +258,7 @@
       <div class="nicki-image">
         <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/cover-story-nicki-minaj.jpg" alt="Nicki Minaj">
       </div>
-      <div class="artist-text" style="text-align: right; max-width: 520px;">
+      <div class="artist-text" style="text-align: right;">
         <h2>NICKI MINAJ</h2>
         <p>BREAKING BARRIERS, BAR BY BAR.</p>
         <a href="nicki.html" class="artist-button">ARTIST PROFILE</a>
@@ -274,16 +267,16 @@
 
     <!-- RIHANNA SECTION -->
     <section class="rihanna-section">
-      <h2 style="margin-left: 0;">RIHANNA</h2>
-      <div class="rihanna-images" style="margin-left: 0;">
+      <h2>RIHANNA</h2>
+      <div class="rihanna-images">
         <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/12269220-0-image-a-47_1555275733883.png" alt="Rihanna 1">
         <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/9a6f2655a0302dc62acad32d5e13d983.jpg" alt="Rihanna 2">
-        <img src="images/rihanna3.jpg" alt="Rihanna 3">
+        <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/o.4412.jpg" alt="Rihanna 3">
       </div>
-      <div class="rihanna-subtext" style="margin-left: 0;">
+      <div class="rihanna-subtext">
         FROM ISLAND TO ICON.
       </div>
-      <a href="rihanna.html" class="artist-button" style="margin-left: 0;">ARTIST PROFILE</a>
+      <a href="rihanna.html" class="artist-button">ARTIST PROFILE</a>
     </section>
   </main>
 

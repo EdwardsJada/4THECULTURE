@@ -80,18 +80,24 @@
       background-color: #444;
     }
 
-    /* Each artist section */
+    /* Artist Sections Spacing */
+    .artist-section, .nicki-section, .rihanna-section {
+      margin-bottom: 160px; /* increased uniform spacing */
+    }
+
+    /* Beyoncé Section - text left, image right */
     .artist-section {
       display: flex;
       align-items: center;
       gap: 30px;
-      margin-bottom: 128px; /* ~2 inches vertical spacing */
       flex-wrap: wrap;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* Beyoncé - Text left, image right */
     .beyonce-text {
-      flex: 1 1 400px;
+      flex: 1 1 600px;
       max-width: 600px;
     }
     .beyonce-text h2 {
@@ -115,14 +121,17 @@
       display: block;
     }
 
-    /* Nicki Minaj - Image left, text right */
+    /* Nicki Minaj Section - image left, text right but text aligned with Beyonce image */
     .nicki-section {
       display: flex;
       align-items: center;
       gap: 30px;
-      margin-bottom: 128px;
       flex-wrap: wrap;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
+
     .nicki-image {
       flex: 0 0 300px;
       max-width: 300px;
@@ -132,9 +141,13 @@
       border-radius: 8px;
       display: block;
     }
+
+    /* To align Nicki's text with Beyoncé's image, add left margin equal to Beyoncé text width + gap */
     .nicki-text {
-      flex: 1 1 400px;
-      max-width: 600px;
+      /* Beyoncé text width: 600px, gap: 30px -> 630px total margin-left */
+      margin-left: 630px;
+      max-width: 340px; /* 1000 - 630 = 370 left, so ~340 for spacing */
+      position: relative;
     }
     .nicki-text h2 {
       font-size: 2.5rem;
@@ -149,10 +162,13 @@
       margin-bottom: 10px;
     }
 
-    /* Rihanna - Centered text + 3 images underneath */
+    /* Rihanna Section - aligned left with Beyonce text and Nicki image */
     .rihanna-section {
-      text-align: center;
-      margin-bottom: 128px;
+      max-width: 600px; /* same width as beyonce-text */
+      margin-left: 0; /* left align */
+      margin-right: auto;
+      text-align: left;
+      margin-bottom: 160px;
     }
     .rihanna-section h2 {
       font-size: 2.5rem;
@@ -162,13 +178,12 @@
     }
     .rihanna-images {
       display: flex;
-      justify-content: center;
       gap: 20px;
       margin-bottom: 15px;
       flex-wrap: wrap;
     }
     .rihanna-images img {
-      width: 200px;
+      width: 180px;
       border-radius: 8px;
     }
     .rihanna-subtitle {

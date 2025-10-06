@@ -57,23 +57,23 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding-top: 7.3rem; /* pushed down about 2.5 spaces */
+      padding-top: 7.3rem; /* avoid header overlap */
     }
 
     .hero h1 {
       font-size: 6rem;
       font-weight: 900;
       letter-spacing: 0.25em;
-      margin: 0 0 0.5em 0;
+      margin: 0;
     }
 
-    .hero p {
+    .hero p.lead {
       font-size: 1.5rem;
       letter-spacing: 0.1em;
       font-weight: 600;
       color: white;
       text-transform: uppercase;
-      margin-top: 4.5rem; /* Gap between heading and subtext */
+      margin-bottom: 4.5rem; /* spacing between p and h1 */
     }
   </style>
 </head>
@@ -92,8 +92,8 @@
 
   <main class="container">
     <section class="hero">
-      <h1>4THECULTURE</h1>
       <p class="lead">FOR THE ICONS. FOR THE INFLUENCE. FOR THE IMPACT.</p>
+      <h1>4THECULTURE</h1>
     </section>
   </main>
 

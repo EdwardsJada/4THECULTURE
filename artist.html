@@ -111,19 +111,23 @@
       text-align: left;
     }
     
-    /* Align Nicki image left */
-    .nicki-image,
-    .beyonce-image {
+    /* Image containers with fixed size */
+    .beyonce-image,
+    .nicki-image {
       max-width: 48%;
       flex-shrink: 0;
+      width: 625px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 8px;
     }
     
     .beyonce-image img,
     .nicki-image img {
       width: 100%;
-      border-radius: 8px;
+      height: 100%;
+      object-fit: cover;
       display: block;
-      max-width: 300px;
     }
     
     /* Rihanna text and images */
@@ -188,6 +192,8 @@
       }
       .artist-text, .nicki-text, .beyonce-image, .nicki-image {
         max-width: 100%;
+        width: 100%;
+        height: auto;
       }
       .rihanna-name, .rihanna-caption {
         text-align: center;
@@ -241,7 +247,7 @@
     <section class="rihanna-section">
       <div class="rihanna-name">RIHANNA</div>
       <div class="rihanna-images">
-        <!-- Placeholder images for Rihanna - you can replace with your own -->
+        <!-- Placeholder images for Rihanna - replace with your actual images -->
         <img src="images/rihanna1.jpg" alt="Rihanna Image 1" />
         <img src="images/rihanna2.jpg" alt="Rihanna Image 2" />
         <img src="images/rihanna3.jpg" alt="Rihanna Image 3" />

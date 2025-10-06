@@ -132,32 +132,21 @@
       border-radius: 8px;
     }
 
-    .rihanna-images {
+    /* Rihanna images grid - Option 2 */
+    .rihanna-images-grid .row-top {
       display: flex;
-      flex-wrap: nowrap;        /* ✅ Prevent stacking on large screens */
       gap: 20px;
-      overflow-x: auto;         /* ✅ Allow horizontal scroll if needed */
-      margin-top: 16px;
-      margin-bottom: 1rem;
+      justify-content: center;
     }
 
-    .rihanna-left img {
-      width: 730px;
-      height: 870px;
-      object-fit: cover;
-      border-radius: 6px;
-      flex-shrink: 0;           /* ✅ Prevent image shrinking */
-    }
-
-    .rihanna-right {
+    .rihanna-images-grid .row-bottom {
       display: flex;
-      flex-direction: column;
-      gap: 0px;
-      flex-shrink: 0;           /* ✅ Prevent image shrinking */
+      justify-content: center;
+      margin-top: 20px;
     }
 
-    .rihanna-right img {
-      width: 650px;
+    .rihanna-images-grid img {
+      width: 680px;
       height: 435px;
       object-fit: cover;
       border-radius: 6px;
@@ -172,21 +161,16 @@
     }
 
     @media (max-width: 1400px) {
-      .rihanna-images {
+      .rihanna-images-grid .row-top,
+      .rihanna-images-grid .row-bottom {
         flex-direction: column;
         align-items: center;
       }
 
-      .rihanna-left img,
-      .rihanna-right img {
+      .rihanna-images-grid img {
         width: 100% !important;
         height: auto !important;
-      }
-
-      .rihanna-right {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        max-width: 680px;
       }
     }
   </style>
@@ -232,16 +216,13 @@
     <!-- RIHANNA SECTION -->
     <section class="rihanna-section">
       <h2>RIHANNA</h2>
-      <div class="rihanna-images">
-        <!-- Left: Image 1 -->
-        <div class="rihanna-left">
-          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/12269220-0-image-a-47_1555275733883.png" alt="Rihanna 1">
+      <div class="rihanna-images-grid">
+        <div class="row-top">
+          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/12269220-0-image-a-47_1555275733883.png" alt="Rihanna 1" />
+          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/9a6f2655a0302dc62acad32d5e13d983.jpg" alt="Rihanna 2" />
         </div>
-
-        <!-- Right: Image 2 (top) & Image 3 (bottom) -->
-        <div class="rihanna-right">
-          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/9a6f2655a0302dc62acad32d5e13d983.jpg" alt="Rihanna 2">
-          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/o.4412.jpg" alt="Rihanna 3">
+        <div class="row-bottom">
+          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/o.4412.jpg" alt="Rihanna 3" />
         </div>
       </div>
 
@@ -256,3 +237,4 @@
   </footer>
 </body>
 </html>
+

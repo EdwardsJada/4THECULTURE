@@ -72,17 +72,12 @@
       margin-bottom: 80px;
     }
 
-    .beyonce-section {
-      justify-content: space-between;
-    }
-
+    .beyonce-section,
     .nicki-section {
       justify-content: space-between;
-      flex-wrap: nowrap;
     }
 
     .rihanna-section {
-      text-align: left;
       margin-bottom: 80px;
     }
 
@@ -145,7 +140,7 @@
     }
 
     .rihanna-left img {
-      width: 1300px;
+      width: 730px;
       height: 870px;
       object-fit: cover;
       border-radius: 6px;
@@ -154,7 +149,7 @@
     .rihanna-right {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 0px;
     }
 
     .rihanna-right img {
@@ -172,7 +167,7 @@
       color: #555;
     }
 
-    @media (max-width: 1600px) {
+    @media (max-width: 1400px) {
       .rihanna-images {
         flex-direction: column;
         align-items: center;
@@ -234,14 +229,18 @@
     <section class="rihanna-section">
       <h2>RIHANNA</h2>
       <div class="rihanna-images">
+        <!-- Left: Image 1 -->
         <div class="rihanna-left">
           <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/12269220-0-image-a-47_1555275733883.png" alt="Rihanna 1">
         </div>
+
+        <!-- Right: Image 2 (top) & Image 3 (bottom) -->
         <div class="rihanna-right">
           <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/9a6f2655a0302dc62acad32d5e13d983.jpg" alt="Rihanna 2">
           <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/o.4412.jpg" alt="Rihanna 3">
         </div>
       </div>
+
       <div class="rihanna-subtext">FROM ISLAND TO ICON.</div>
       <a href="rihanna.html" class="artist-button">ARTIST PROFILE</a>
     </section>

@@ -1,108 +1,101 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>4THECULTURE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4THECULTURE.</title>
+
+  <!-- Load Inter font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
+
   <style>
-    /* Reset & basics */
     * {
       box-sizing: border-box;
     }
-    body, html {
+
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background-color: #1a1a1a; /* dark grey-black background */
-      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: url('images/photo-1713054077685-114064f1244d.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Inter', sans-serif;
       color: white;
     }
 
-    /* Header/Nav */
-    .header {
-      background-color: #1a1a1a; /* dark grey-black background */
-      position: sticky;
+    header {
+      position: fixed;
       top: 0;
-      z-index: 10;
+      left: 0;
+      right: 0;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      max-width: 1000px;
-      margin: 0 auto;
+      z-index: 10;
     }
 
-    .nav-left a {
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-size: 14px;
-    }
-
+    .nav-left a,
     .nav-right a {
       color: white;
-      font-weight: 600;
       text-decoration: none;
-      letter-spacing: 1.5px;
       text-transform: uppercase;
-      font-size: 14px;
-      margin-left: 30px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
 
-    /* Main content container */
+    .nav-right {
+      display: flex;
+      gap: 30px;
+    }
+
     main.container {
-      height: calc(100vh - 72px); /* full viewport height minus header height */
-      max-width: 1000px;
-      margin: 0 auto;
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* center vertically */
-      align-items: center;     /* center horizontally */
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 0 20px;
+      padding-top: 80px;
     }
 
-    /* Hero Section */
     .hero h1 {
-      font-size: 4rem;
+      font-size: 6rem;
       font-weight: 900;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.25em;
       margin: 0;
-      user-select: none;
     }
 
-    .hero p.lead {
-      margin-top: 1rem;
+    .hero p {
       font-size: 1.5rem;
       letter-spacing: 0.1em;
       font-weight: 600;
-      color: #cccccc;
+      color: #e0e0e0;
       text-transform: uppercase;
-      user-select: none;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <div class="nav-left">
-        <a href="index.html">HOME</a>
-      </div>
-      <div class="nav-right">
-        <a href="artist.html">ARTIST</a>
-        <a href="about.html">ABOUT</a>
-        <a href="contact.html">CONTACT</a>
-      </div>
-    </nav>
+
+  <header>
+    <div class="nav-left">
+      <a href="index.html">HOME</a>
+    </div>
+    <div class="nav-right">
+      <a href="artist.html">ARTIST</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>4THECULTURE</h1>
-      <p class="lead">ICONS. INFLUENCE. IMPACT.</p>
+      <h1>4THECULTURE.</h1>
+      <p>ICONS. INFLUENCE. IMPACT.</p>
     </section>
   </main>
+
 </body>
 </html>

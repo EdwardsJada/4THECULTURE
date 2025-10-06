@@ -89,23 +89,26 @@
       max-width: 520px;
     }
 
+    /* Increased font sizes */
     .artist-text h2 {
       margin-top: 0;
       font-weight: 900;
-      font-size: 2.25rem;
-      margin-bottom: 0.25em;
+      font-size: 3.5rem; /* increased from 2.25rem */
+      margin-bottom: 0.35em;
+      line-height: 1.1;
     }
 
     .artist-text p {
-      font-size: 1.1rem;
+      font-size: 1.6rem; /* increased from 1.1rem */
       margin-top: 0;
-      margin-bottom: 1.2em;
+      margin-bottom: 1.5em;
       color: #222;
+      line-height: 1.3;
     }
 
     .artist-button {
       display: inline-block;
-      padding: 10px 22px;
+      padding: 14px 30px; /* larger padding */
       background-color: black;
       color: white;
       font-weight: 600;
@@ -114,6 +117,7 @@
       letter-spacing: 1px;
       border-radius: 4px;
       transition: background-color 0.3s ease;
+      font-size: 22px; /* larger font */
     }
 
     .artist-button:hover {
@@ -155,6 +159,60 @@
       margin-top: 60px;
       font-size: 0.9rem;
       color: #555;
+    }
+
+    /* Responsive - prevent overlap on smaller screens */
+    @media (max-width: 1100px) {
+      .artist-section {
+        flex-wrap: wrap;
+        gap: 30px;
+      }
+
+      .artist-text,
+      .beyonce-image,
+      .nicki-image {
+        max-width: 100%;
+        width: 100%;
+        flex: none;
+      }
+
+      .artist-text h2 {
+        font-size: 2.8rem;
+      }
+
+      .artist-text p {
+        font-size: 1.3rem;
+      }
+
+      .artist-button {
+        font-size: 18px;
+        padding: 12px 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      main.container {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 80px;
+      }
+
+      .artist-text h2 {
+        font-size: 2.2rem;
+      }
+
+      .artist-text p {
+        font-size: 1.1rem;
+      }
+
+      .artist-button {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
     }
   </style>
 </head>

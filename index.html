@@ -1,93 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>4THECULTURE.</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4THECULTURE</title>
+
+  <!-- Load Inter font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
+
   <style>
-    /* Reset & basics */
     * {
       box-sizing: border-box;
     }
-    body, html {
+
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      background: url('photo-1713054077685-114064f1244d.jpg') no-repeat center center fixed;
+      background: url('images/photo-1713054077685-114064f1244d.jpg') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Inter', sans-serif;
       color: white;
     }
 
-    /* Header/Nav */
-    .header {
-      background-color: transparent;
-      position: sticky;
+    header {
+      position: fixed;
       top: 0;
-      z-index: 10;
+      left: 0;
+      right: 0;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
-      max-width: 1000px;
-      margin: 0 auto;
+      z-index: 10;
     }
 
-    .nav-left a {
-      color: white;
-      font-weight: 600;
-      text-decoration: none;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-size: 12px;
-    }
-
+    .nav-left a,
     .nav-right a {
       color: white;
-      font-weight: 600;
       text-decoration: none;
-      letter-spacing: 1.5px;
       text-transform: uppercase;
       font-size: 12px;
-      margin-left: 30px;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
 
-    /* Main content container */
+    .nav-right {
+      display: flex;
+      gap: 30px;
+    }
+
     main.container {
-      height: calc(100vh - 72px); /* full viewport height minus header height */
-      max-width: 1000px;
-      margin: 0 auto;
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* center vertically */
-      align-items: center;     /* center horizontally */
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 0 20px;
+      padding-top: 80px;
     }
 
-    /* Hero Section */
     .hero h1 {
-      font-size: 8rem; /* 2 sizes bigger */
+      font-size: 6rem;
       font-weight: 900;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.25em;
       margin: 0;
-      user-select: none;
-      color: white;
-      list-style-type: square;
-      padding-left: 1.2em;
-      position: relative;
-      /* Adding a square bullet before the text */
-    }
-    .hero h1::before {
-      content: "■";
-      position: absolute;
-      left: 0;
-      color: white;
-      font-size: 1.2em;
-      top: 50%;
-      transform: translateY(-50%);
-      user-select: none;
     }
 
     .hero p {
@@ -96,46 +73,29 @@
       font-weight: 600;
       color: #e0e0e0;
       text-transform: uppercase;
-      margin-top: 40px; /* spacing between h1 and p */
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      user-select: none;
-      position: relative;
-      padding-left: 1.2em;
-      list-style: none;
-    }
-    .hero p::before {
-      content: "■";
-      position: absolute;
-      left: 0;
-      color: #e0e0e0;
-      font-size: 1em;
-      top: 50%;
-      transform: translateY(-50%);
-      user-select: none;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <nav class="nav">
-      <div class="nav-left">
-        <a href="index.html">HOME</a>
-      </div>
-      <div class="nav-right">
-        <a href="artist.html">ARTIST</a>
-        <a href="about.html">ABOUT</a>
-        <a href="contact.html">CONTACT</a>
-      </div>
-    </nav>
+
+  <header>
+    <div class="nav-left">
+      <a href="index.html">HOME</a>
+    </div>
+    <div class="nav-right">
+      <a href="artist.html">ARTIST</a>
+      <a href="about.html">ABOUT</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>4THECULTURE.</h1>
+      <h1>4THECULTURE</h1>
       <p>ICONS. INFLUENCE. IMPACT.</p>
     </section>
   </main>
+
 </body>
 </html>

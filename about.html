@@ -4,24 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About | 4THECULTURE</title>
-
+  
   <!-- Inter font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
-
+  
   <style>
+    /* Reset & basics */
     * {
       box-sizing: border-box;
     }
-
+    
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
-      font-family: 'Inter', sans-serif;
       background-color: white;
+      font-family: 'Inter', sans-serif;
       color: black;
+      height: 100%;
     }
-
+    
     /* Header/Nav */
     header {
       position: fixed;
@@ -36,7 +37,7 @@
       z-index: 10;
       border-bottom: 1px solid #ccc;
     }
-
+    
     .nav-left a {
       color: black;
       font-weight: 600;
@@ -45,12 +46,12 @@
       letter-spacing: 1px;
       font-size: 21.5px;
     }
-
+    
     .nav-right {
       display: flex;
       gap: 30px;
     }
-
+    
     .nav-right a {
       color: black;
       font-weight: 600;
@@ -59,32 +60,40 @@
       letter-spacing: 1px;
       font-size: 21.5px;
     }
-
+    
     /* Main container */
     main.container {
-      padding-top: 120px; /* Offset for fixed nav */
-      max-width: 800px;
+      padding-top: 80px; /* to avoid nav overlap */
+      max-width: 700px;
       margin: 0 auto;
       padding-left: 20px;
       padding-right: 20px;
     }
-
+    
     /* Hero Section */
     .hero h1 {
       font-size: 3rem;
       font-weight: 900;
-      margin-bottom: 0.1em; /* moved up */
+      margin-bottom: 0.5em;
       text-transform: uppercase;
       text-align: center;
     }
-
+    
     .hero p.lead {
       font-size: 1.5rem;
       font-weight: 600;
-      text-align: center;
+      color: black;
       margin-top: 0;
-      margin-bottom: 1em; /* moved up */
+      margin-bottom: 1.5em;
+      text-align: center;
     }
+    
+    /* Centered paragraph below hero */
+    .centered-text {
+      text-align: center;
+      font-size: 1.1rem;
+      color: black;
+      margin-bottom: 1.5em;
 
     /* Paragraph styling */
     section > p {

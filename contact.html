@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | 4THECULTURE</title>
-
+  <title>Contact | 4THECULTURE</title>
+  
   <!-- Inter font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
-
+  
   <style>
     /* Reset & basics */
     * {
       box-sizing: border-box;
     }
-
+    
     html, body {
       margin: 0;
       padding: 0;
@@ -22,7 +22,7 @@
       color: black;
       height: 100%;
     }
-
+    
     /* Header/Nav */
     header {
       position: fixed;
@@ -37,7 +37,7 @@
       z-index: 10;
       border-bottom: 1px solid #ccc;
     }
-
+    
     .nav-left a {
       color: black;
       font-weight: 600;
@@ -46,12 +46,12 @@
       letter-spacing: 1px;
       font-size: 21.5px;
     }
-
+    
     .nav-right {
       display: flex;
       gap: 30px;
     }
-
+    
     .nav-right a {
       color: black;
       font-weight: 600;
@@ -60,7 +60,7 @@
       letter-spacing: 1px;
       font-size: 21.5px;
     }
-
+    
     /* Main container */
     main.container {
       padding-top: 80px; /* to avoid nav overlap */
@@ -69,16 +69,16 @@
       padding-left: 20px;
       padding-right: 20px;
     }
-
+    
     /* Hero Section */
     .hero h1 {
       font-size: 3rem;
       font-weight: 900;
+      margin-bottom: 0.5em;
       text-transform: uppercase;
       text-align: center;
-      margin-bottom: 0.5em;
     }
-
+    
     .hero p.lead {
       font-size: 1.5rem;
       font-weight: 600;
@@ -87,15 +87,61 @@
       margin-bottom: 1.5em;
       text-align: center;
     }
-
-    /* Paragraph content */
-    .about-text p {
+    
+    /* Centered paragraph below hero */
+    .centered-text {
+      text-align: center;
       font-size: 1.1rem;
       color: black;
-      margin-bottom: 1.2em;
-      line-height: 1.6;
+      margin-bottom: 1.5em;
     }
-
+    
+    /* Form */
+    form {
+      margin-top: 18px;
+    }
+    
+    label {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      font-family: inherit;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      resize: vertical;
+    }
+    
+    button[type="submit"] {
+      padding: 10px 18px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #333;
+    }
+    
+    section > p:last-of-type {
+      font-size: 1.1rem;
+      color: black;
+      margin-top: 14px;
+    }
+    
     /* Footer */
     footer {
       text-align: center;
@@ -105,7 +151,7 @@
       margin-top: 60px;
       font-size: 0.8rem;
     }
-
+    
     .footer-small {
       margin-top: 10px;
       font-size: 0.8rem;
@@ -127,28 +173,33 @@
 
   <main class="container">
     <section class="hero">
-      <h1>ABOUT 4THECULTURE</h1>
-      <p class="lead">FOR THE ICONS. FOR THE INFLUENCE. FOR THE IMPACT. 4THECULTURE.</p>
+      <h1>CONTACT 4THECULTURE</h1>
+      <p class="lead">Got something to say? We’re listening.</p>
     </section>
 
-    <section class="about-text">
-      <p>
-        4THECULTURE is a digital space created to honor and uplift the Black artists who have shaped music, challenged norms, and redefined culture. This platform exists to spotlight not just their creative achievements, but their social impact, business ventures, activism, and ongoing influence in communities around the world.
+    <section>
+      <p class="centered-text">
+        Whether you want to share feedback, suggest an artist to feature, collaborate, or simply show love, we’d love to hear from you! Use the form below and we’ll get back to you as soon as possible.
       </p>
-
-      <p>
-        Often, the deeper contributions of Black artists are overlooked or overshadowed by their commercial success. 4THECULTURE aims to shift that narrative by telling the full story — the story behind the sound. Whether through detailed profiles, fan engagement, or curated content, this site celebrates the power, resilience, and artistry that continues to move the culture forward.
-      </p>
-
-      <p>
-        Created by someone passionate about representation and legacy, this platform was built with intention: to inform, inspire, and empower. While the creator remains behind the scenes, the purpose is front and center — to amplify Black voices and ensure their stories are preserved, celebrated, and respected.
-      </p>
+      <form action="mailto:info@4theculture.com" method="post" enctype="text/plain">
+        <label>Name<br>
+          <input type="text" name="name" />
+        </label><br><br>
+        <label>Email<br>
+          <input type="email" name="email" />
+        </label><br><br>
+        <label>Message<br>
+          <textarea name="message" rows="6"></textarea>
+        </label><br><br>
+        <button type="submit">Send</button>
+        <p>EMAIL 4THECULTURE AT: info@4theculture.com</p>
+      </form>
     </section>
   </main>
 
   <footer>
     <div>4THECULTURE</div>
-    <div class="footer-small">Follow us on Instagram, X (Twitter), and Facebook — Social Media: @4THECULTURE | Email: info@4theculture.com</div>
+    <div class="footer-small">Follow us on Instagram, X (Twitter), and Facebook — Social Media: @4THECULTURE | Email: info@4theculture.com</p></div>
   </footer>
 </body>
 </html>

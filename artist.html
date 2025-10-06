@@ -61,8 +61,10 @@
 
     main.container {
       padding-top: 80px;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 60px; /* increased padding left */
+      padding-right: 60px; /* increased padding right */
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .artist-section {
@@ -75,10 +77,19 @@
     .beyonce-section,
     .nicki-section {
       justify-content: space-between;
+      max-width: 680px;
+      margin: 0 auto 80px auto;
+    }
+
+    .nicki-section {
+      margin-left: 0; /* align with container left padding */
     }
 
     .rihanna-section {
       margin-bottom: 80px;
+      max-width: 1400px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .artist-text {
@@ -130,19 +141,26 @@
       height: 435px;
       object-fit: cover;
       border-radius: 8px;
+      display: block;
+      margin: 0 auto;
     }
 
-    /* Rihanna images grid - Option 2 */
+    /* Rihanna images grid with alignment */
+    .rihanna-images-grid {
+      display: grid;
+      grid-template-columns: 680px auto;
+      column-gap: calc(60px); /* match container padding */
+      justify-content: center;
+      align-items: start;
+      margin-top: 16px;
+      margin-bottom: 1rem;
+    }
+
     .rihanna-images-grid .row-top {
       display: flex;
+      flex-direction: column;
       gap: 20px;
-      justify-content: center;
-    }
-
-    .rihanna-images-grid .row-bottom {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
+      justify-content: start;
     }
 
     .rihanna-images-grid img {
@@ -150,6 +168,29 @@
       height: 435px;
       object-fit: cover;
       border-radius: 6px;
+      display: block;
+    }
+
+    .rihanna-images-grid .image1 {
+      /* Align vertically with Nicki Minaj image */
+      justify-self: start;
+    }
+
+    .rihanna-images-grid .row-top img,
+    .rihanna-images-grid .row-bottom img {
+      width: 680px;
+      height: 435px;
+    }
+
+    /* Positioning for image2 aligned with Beyoncé image right edge */
+    .rihanna-images-grid .row-top img:nth-child(2) {
+      align-self: start;
+      justify-self: end;
+    }
+
+    .rihanna-images-grid .row-bottom {
+      margin-top: 20px;
+      justify-self: end;
     }
 
     footer {
@@ -158,21 +199,29 @@
       margin-top: 60px;
       font-size: 0.9rem;
       color: #555;
+      text-align: center;
     }
 
     @media (max-width: 1400px) {
+      main.container {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+      .rihanna-images-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
       .rihanna-images-grid .row-top,
       .rihanna-images-grid .row-bottom {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
       }
-
       .rihanna-images-grid img {
         width: 100% !important;
         height: auto !important;
         max-width: 680px;
       }
     }
+
   </style>
 </head>
 
@@ -189,6 +238,7 @@
   </header>
 
   <main class="container">
+
     <!-- BEYONCÉ SECTION -->
     <section class="artist-section beyonce-section">
       <div class="artist-text" style="text-align: left;">
@@ -197,14 +247,14 @@
         <a href="beyonce.html" class="artist-button">ARTIST PROFILE</a>
       </div>
       <div class="beyonce-image">
-        <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/s-l1200.jpg" alt="Beyoncé">
+        <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/s-l1200.jpg" alt="Beyoncé" />
       </div>
     </section>
 
     <!-- NICKI MINAJ SECTION -->
     <section class="artist-section nicki-section">
       <div class="nicki-image">
-        <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/cover-story-nicki-minaj.jpg" alt="Nicki Minaj">
+        <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/cover-story-nicki-minaj.jpg" alt="Nicki Minaj" />
       </div>
       <div class="artist-text" style="text-align: right;">
         <h2>NICKI MINAJ</h2>
@@ -217,12 +267,20 @@
     <section class="rihanna-section">
       <h2>RIHANNA</h2>
       <div class="rihanna-images-grid">
+        <img
+          class="image1"
+          src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/12269220-0-image-a-47_1555275733883.png"
+          alt="Rihanna 1"
+        />
         <div class="row-top">
-          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/12269220-0-image-a-47_1555275733883.png" alt="Rihanna 1" />
-          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/9a6f2655a0302dc62acad32d5e13d983.jpg" alt="Rihanna 2" />
-        </div>
-        <div class="row-bottom">
-          <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/o.4412.jpg" alt="Rihanna 3" />
+          <img
+            src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/9a6f2655a0302dc62acad32d5e13d983.jpg"
+            alt="Rihanna 2"
+          />
+          <img
+            src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/o.4412.jpg"
+            alt="Rihanna 3"
+          />
         </div>
       </div>
 
@@ -237,4 +295,3 @@
   </footer>
 </body>
 </html>
-

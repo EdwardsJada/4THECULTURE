@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
 
   <style>
-    *, *::before, *::after {
+    * {
       box-sizing: border-box;
     }
 
@@ -37,15 +37,13 @@
       border-bottom: 1px solid #ccc;
     }
 
-    .nav-left a,
-    .nav-right a {
+    .nav-left a {
       color: black;
       font-weight: 600;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: 1px;
       font-size: 21.5px;
-      transition: color 0.3s ease;
     }
 
     .nav-right {
@@ -53,9 +51,13 @@
       gap: 30px;
     }
 
-    .nav-left a:hover,
-    .nav-right a:hover {
-      color: #555;
+    .nav-right a {
+      color: black;
+      font-weight: 600;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 21.5px;
     }
 
     /* Main container */
@@ -71,7 +73,7 @@
     .hero h1 {
       font-size: 3rem;
       font-weight: 900;
-      margin-bottom: 0.25em; /* Reduced bottom margin to move up */
+      margin-bottom: 0.1em; /* moved up */
       text-transform: uppercase;
       text-align: center;
     }
@@ -80,18 +82,15 @@
       font-size: 1.5rem;
       font-weight: 600;
       text-align: center;
-      margin: 0 auto 2.5em; /* Center and space below */
-      max-width: 400px; /* narrower width */
-      letter-spacing: 1.2px;
+      margin-top: 0;
+      margin-bottom: 1em; /* moved up */
     }
 
     /* Paragraph styling */
-    section.content > p {
+    section > p {
       font-size: 1.15rem;
       line-height: 1.7;
       color: black;
-      margin-left: 60px;  /* wider margins */
-      margin-right: 60px;
       margin-bottom: 1.5em;
     }
 
@@ -130,7 +129,7 @@
       <p class="lead">FOR THE ICONS. FOR THE INFLUENCE. FOR THE IMPACT. 4THECULTURE.</p>
     </section>
 
-    <section class="content">
+    <section>
       <p>
         4THECULTURE is a digital space created to honor and uplift the Black artists who have shaped music, challenged norms, and redefined culture. This platform exists to spotlight not just their creative achievements, but their social impact, business ventures, activism, and ongoing influence in communities around the world.
       </p>

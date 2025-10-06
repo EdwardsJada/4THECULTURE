@@ -63,13 +63,13 @@
       font-size: 21.5px;
     }
     
-    /* Main content container with some top padding to avoid nav overlap */
+    /* Main content container with adjusted left/right padding */
     main.container {
       padding-top: 80px;
       max-width: 1000px;
       margin: 0 auto;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
     }
     
     /* Artist sections */
@@ -77,21 +77,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 80px; /* About 2 inches spacing */
+      margin-bottom: 80px;
     }
 
-    /* Beyoncé Section overrides */
     .beyonce-section {
       justify-content: space-between;
     }
 
-    /* Nicki Minaj Section overrides */
     .nicki-section {
       justify-content: space-between;
       flex-wrap: nowrap;
     }
 
-    /* Rihanna Section */
     .rihanna-section {
       text-align: left;
     }
@@ -133,7 +130,7 @@
       background-color: #333;
     }
     
-    /* Images - restored original sizes */
+    /* Images */
     .beyonce-image img {
       width: 680px;
       height: 435px;
@@ -162,7 +159,6 @@
       border-radius: 6px;
     }
 
-    /* Text under Rihanna images */
     .rihanna-subtext {
       font-weight: 700;
       font-size: 1.2rem;
@@ -214,7 +210,6 @@
     <section class="rihanna-section">
       <h2 style="margin-left: 0;">RIHANNA</h2>
       <div class="rihanna-images" style="margin-left: 0;">
-        <!-- Placeholder images you plan to insert -->
         <img src="images/rihanna1.jpg" alt="Rihanna 1">
         <img src="images/rihanna2.jpg" alt="Rihanna 2">
         <img src="images/rihanna3.jpg" alt="Rihanna 3">

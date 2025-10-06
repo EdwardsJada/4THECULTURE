@@ -134,7 +134,9 @@
 
     .rihanna-images {
       display: flex;
+      flex-wrap: nowrap;        /* ✅ Prevent stacking on large screens */
       gap: 20px;
+      overflow-x: auto;         /* ✅ Allow horizontal scroll if needed */
       margin-top: 16px;
       margin-bottom: 1rem;
     }
@@ -144,12 +146,14 @@
       height: 870px;
       object-fit: cover;
       border-radius: 6px;
+      flex-shrink: 0;           /* ✅ Prevent image shrinking */
     }
 
     .rihanna-right {
       display: flex;
       flex-direction: column;
       gap: 0px;
+      flex-shrink: 0;           /* ✅ Prevent image shrinking */
     }
 
     .rihanna-right img {

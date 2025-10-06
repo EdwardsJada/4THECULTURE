@@ -9,11 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet" />
   
   <style>
-    /* Reset & basics */
     * {
       box-sizing: border-box;
     }
-    
+
     html, body {
       margin: 0;
       padding: 0;
@@ -22,8 +21,7 @@
       color: black;
       height: 100%;
     }
-    
-    /* Header/Nav */
+
     header {
       position: fixed;
       top: 0;
@@ -37,8 +35,7 @@
       z-index: 10;
       border-bottom: 1px solid #ccc;
     }
-    
-    /* Brand or HOME on left */
+
     .nav-left a {
       color: black;
       font-weight: 600;
@@ -47,13 +44,12 @@
       letter-spacing: 1px;
       font-size: 21.5px;
     }
-    
-    /* Right side nav links */
+
     .nav-right {
       display: flex;
       gap: 30px;
     }
-    
+
     .nav-right a {
       color: black;
       font-weight: 600;
@@ -62,17 +58,13 @@
       letter-spacing: 1px;
       font-size: 21.5px;
     }
-    
-    /* Main content container with adjusted left/right padding */
+
     main.container {
       padding-top: 80px;
-      max-width: 1000px;
-      margin: 0 auto;
       padding-left: 40px;
       padding-right: 40px;
     }
-    
-    /* Artist sections */
+
     .artist-section {
       display: flex;
       justify-content: space-between;
@@ -93,27 +85,24 @@
       text-align: left;
     }
 
-    /* Text containers */
     .artist-text {
       max-width: 520px;
     }
 
-    /* Artist Names and Descriptions */
     .artist-text h2 {
       margin-top: 0;
       font-weight: 900;
       font-size: 2.25rem;
       margin-bottom: 0.25em;
     }
-    
+
     .artist-text p {
       font-size: 1.1rem;
       margin-top: 0;
       margin-bottom: 1.2em;
       color: #222;
     }
-    
-    /* Buttons */
+
     .artist-button {
       display: inline-block;
       padding: 10px 22px;
@@ -126,18 +115,12 @@
       border-radius: 4px;
       transition: background-color 0.3s ease;
     }
+
     .artist-button:hover {
       background-color: #333;
     }
-    
-    /* Images */
-    .beyonce-image img {
-      width: 680px;
-      height: 435px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
 
+    .beyonce-image img,
     .nicki-image img {
       width: 680px;
       height: 435px;
@@ -165,6 +148,14 @@
       margin-bottom: 20px;
       color: #111;
     }
+
+    footer {
+      padding: 40px;
+      border-top: 1px solid #ccc;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #555;
+    }
   </style>
 </head>
 
@@ -181,7 +172,6 @@
   </header>
 
   <main class="container">
-    
     <!-- BEYONCÉ SECTION -->
     <section class="artist-section beyonce-section">
       <div class="artist-text" style="text-align: left;">
@@ -195,7 +185,7 @@
     </section>
 
     <!-- NICKI MINAJ SECTION -->
-    <section class="artist-section nicki-section" style="margin-bottom: 80px;">
+    <section class="artist-section nicki-section">
       <div class="nicki-image">
         <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/cover-story-nicki-minaj.jpg" alt="Nicki Minaj">
       </div>
@@ -219,7 +209,6 @@
       </div>
       <a href="rihanna.html" class="artist-button" style="margin-left: 0;">ARTIST PROFILE</a>
     </section>
-
   </main>
 
   <footer>

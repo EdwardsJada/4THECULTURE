@@ -63,144 +63,171 @@
       font-size: 21.5px;
     }
     
-    /* Main container */
+    /* Main content container with some top padding to avoid nav overlap */
     main.container {
-      padding-top: 100px; /* leave space for fixed header */
+      padding-top: 100px;
       max-width: 1000px;
       margin: 0 auto;
       padding-left: 20px;
       padding-right: 20px;
     }
     
-    /* Artist Sections */
+    /* Hero Section */
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin-bottom: 0.5em;
+    }
+    
+    .hero p.lead {
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 0;
+      color: #333;
+    }
+
+    /* Artist Section General Styles */
     .artist-section {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      margin-bottom: 3rem; /* spacing between artists */
+      align-items: center;
+      margin-bottom: 3rem;
       flex-wrap: wrap;
+      gap: 20px;
     }
 
-    /* Beyoncé: text left, image right */
+    /* Beyoncé Section Specifics */
     .beyonce-section {
-      flex-direction: row;
-    }
-
-    /* Nicki Minaj: image left, text right */
-    .nicki-section {
-      flex-direction: row;
+      /* keep default flex-direction row */
     }
     
-    /* Rihanna: vertical stacked, text left, images below */
-    .rihanna-section {
+    .artist-text {
+      max-width: 600px;
+      color: black;
       display: flex;
       flex-direction: column;
-      margin-bottom: 3rem;
-    }
-
-    /* Text containers */
-    .artist-text {
-      max-width: 48%;
-      color: black;
+      justify-content: center;
     }
     
-    /* Align Nicki Minaj text left under Beyonce image */
-    .nicki-text {
-      max-width: 48%;
-      color: black;
-      text-align: left;
-    }
-    
-    /* Image containers with fixed size */
-    .beyonce-image,
-    .nicki-image {
-      max-width: 48%;
-      flex-shrink: 0;
+    /* Beyoncé image fixed size */
+    .beyonce-image {
       width: 625px;
       height: 400px;
       overflow: hidden;
       border-radius: 8px;
+      flex-shrink: 0;
     }
-    
-    .beyonce-image img,
+
+    .beyonce-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Nicki Minaj Section */
+    .nicki-section {
+      display: flex;
+      justify-content: flex-start;
+      gap: 20px;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    /* Nicki image fixed size smaller than Beyoncé */
+    .nicki-image {
+      width: 300px;
+      height: 400px;
+      overflow: hidden;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
     .nicki-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
     }
-    
-    /* Rihanna text and images */
-    .rihanna-name {
+
+    /* Nicki text container width same as Beyoncé image width for alignment */
+    .nicki-text {
+      width: 625px;
+      text-align: left;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Rihanna Section */
+    .rihanna-section {
+      margin-top: 3rem;
+      text-align: left;
+    }
+
+    .rihanna-text {
       font-weight: 900;
       font-size: 2rem;
       margin-bottom: 1rem;
-      max-width: 48%;
-      color: black;
-      text-align: left;
     }
+
     .rihanna-images {
       display: flex;
-      gap: 1rem;
+      gap: 15px;
       margin-bottom: 1rem;
-      max-width: 100%;
     }
-    /* Placeholder for 3 images below Rihanna's name */
+
     .rihanna-images img {
       width: 30%;
       border-radius: 8px;
+      object-fit: cover;
+      height: auto;
     }
-    .rihanna-caption {
+
+    .rihanna-subtext {
       font-weight: 600;
-      font-size: 1.2rem;
       margin-bottom: 1rem;
-      max-width: 48%;
-      color: black;
-      text-align: left;
     }
-    
+
     /* Buttons */
     .artist-button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 10px 24px;
       background-color: black;
       color: white;
-      font-weight: 600;
+      padding: 10px 22px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      font-weight: 600;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      width: max-content;
       text-decoration: none;
-      font-size: 1rem;
+      margin-top: 1rem;
       transition: background-color 0.3s ease;
     }
-    
+
     .artist-button:hover {
       background-color: #333;
     }
-    
-    /* Responsive for smaller screens */
-    @media (max-width: 768px) {
-      .artist-section,
-      .beyonce-section,
-      .nicki-section {
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .artist-section, .nicki-section {
         flex-direction: column;
         align-items: center;
-        text-align: center;
       }
-      .artist-text, .nicki-text, .beyonce-image, .nicki-image {
-        max-width: 100%;
+      .beyonce-image, .nicki-image, .nicki-text {
         width: 100%;
-        height: auto;
+        max-width: 625px;
       }
-      .rihanna-name, .rihanna-caption {
-        text-align: center;
+      .artist-text {
         max-width: 100%;
       }
-      .rihanna-images {
-        justify-content: center;
+      .nicki-text {
+        width: 100%;
       }
     }
   </style>
@@ -245,14 +272,14 @@
 
     <!-- Rihanna Section -->
     <section class="rihanna-section">
-      <div class="rihanna-name">RIHANNA</div>
+      <div class="rihanna-text">RIHANNA</div>
       <div class="rihanna-images">
-        <!-- Placeholder images for Rihanna - replace with your actual images -->
+        <!-- Placeholder for 3 images - replace with actual image paths -->
         <img src="images/rihanna1.jpg" alt="Rihanna Image 1" />
         <img src="images/rihanna2.jpg" alt="Rihanna Image 2" />
         <img src="images/rihanna3.jpg" alt="Rihanna Image 3" />
       </div>
-      <div class="rihanna-caption">FROM ISLAND TO ICON.</div>
+      <div class="rihanna-subtext">FROM ISLAND TO ICON.</div>
       <a href="rihanna.html" class="artist-button">ARTIST PROFILE</a>
     </section>
   </main>

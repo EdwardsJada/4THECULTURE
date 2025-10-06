@@ -71,14 +71,12 @@
     }
     
     /* Hero Section */
-    .hero {
-      text-align: center;
-    }
     .hero h1 {
       font-size: 3rem;
       font-weight: 900;
       margin-bottom: 0.5em;
       text-transform: uppercase;
+      text-align: center;
     }
     
     .hero p.lead {
@@ -86,6 +84,15 @@
       font-weight: 600;
       color: black;
       margin-top: 0;
+      margin-bottom: 1.5em;
+      text-align: center;
+    }
+    
+    /* Centered paragraph below hero */
+    .centered-text {
+      text-align: center;
+      font-size: 1.1rem;
+      color: black;
       margin-bottom: 1.5em;
     }
     
@@ -129,9 +136,10 @@
       background-color: #333;
     }
     
-    section > p {
+    section > p:last-of-type {
       font-size: 1.1rem;
       color: black;
+      margin-top: 14px;
     }
     
     /* Footer */
@@ -170,7 +178,9 @@
     </section>
 
     <section>
-      <p>Whether you want to share feedback, suggest an artist to feature, collaborate, or simply show love, we’d love to hear from you! Use the form below and we’ll get back to you as soon as possible.</p>
+      <p class="centered-text">
+        Whether you want to share feedback, suggest an artist to feature, collaborate, or simply show love, we’d love to hear from you! Use the form below and we’ll get back to you as soon as possible.
+      </p>
       <form action="mailto:info@4theculture.com" method="post" enctype="text/plain">
         <label>Name<br>
           <input type="text" name="name" />
@@ -183,12 +193,12 @@
         </label><br><br>
         <button type="submit">Send</button>
       </form>
-      <p style="margin-top:14px;">Email: info@4theculture.com</p>
+      <p>Email: info@4theculture.com</p>
     </section>
   </main>
 
   <footer>
-    <div>For the Icons. 4THECULTURE.</div>
+    <div>4THECULTURE</div>
     <div class="footer-small">Follow us on Instagram, X (Twitter), and Facebook — Social Media: @4THECULTURE</div>
   </footer>
 </body>

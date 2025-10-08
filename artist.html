@@ -72,28 +72,21 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 80px;
-      gap: 80px; /* Increased spacing between text and image */
+      gap: 80px; /* Space between text and image */
     }
 
     .beyonce-section,
-    .nicki-section {
+    .nicki-section,
+    .rihanna-section {
       max-width: 1400px;
       margin: 0 auto 80px auto;
-    }
-
-    .rihanna-section {
-      margin-bottom: 80px;
-      max-width: 1400px;
-      margin-left: auto;
-      margin-right: auto;
     }
 
     .artist-text {
       max-width: 520px;
     }
 
-    .artist-text h2,
-    .rihanna-section h2 {
+    .artist-text h2 {
       margin-top: 0;
       font-weight: 900;
       font-size: 4rem;
@@ -101,8 +94,7 @@
       line-height: 1.1;
     }
 
-    .artist-text p,
-    .rihanna-subtext {
+    .artist-text p {
       font-size: 1.8rem;
       margin-top: 0;
       margin-bottom: 1.5em;
@@ -132,59 +124,14 @@
     }
 
     .beyonce-image img,
-    .nicki-image img {
+    .nicki-image img,
+    .rihanna-image img {
       width: 680px;
       height: 435px;
       object-fit: cover;
       border-radius: 8px;
       display: block;
       margin: 0 auto;
-    }
-
-    /* Rihanna images grid */
-    .rihanna-images-grid {
-      display: grid;
-      grid-template-columns: 680px auto;
-      column-gap: 60px;
-      justify-content: center;
-      align-items: start;
-      margin-top: 16px;
-      margin-bottom: 1rem;
-    }
-
-    .rihanna-images-grid .row-top {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      justify-content: start;
-    }
-
-    .rihanna-images-grid img {
-      width: 680px;
-      height: 435px;
-      object-fit: cover;
-      border-radius: 6px;
-      display: block;
-    }
-
-    .rihanna-images-grid .image1 {
-      justify-self: start;
-    }
-
-    .rihanna-images-grid .row-top img,
-    .rihanna-images-grid .row-bottom img {
-      width: 680px;
-      height: 435px;
-    }
-
-    .rihanna-images-grid .row-top img:nth-child(2) {
-      align-self: start;
-      justify-self: end;
-    }
-
-    .rihanna-images-grid .row-bottom {
-      margin-top: 20px;
-      justify-self: end;
     }
 
     footer {
@@ -201,22 +148,6 @@
         padding-left: 40px;
         padding-right: 40px;
       }
-
-      .rihanna-images-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .rihanna-images-grid .row-top,
-      .rihanna-images-grid .row-bottom {
-        justify-content: center;
-      }
-
-      .rihanna-images-grid img {
-        width: 100% !important;
-        height: auto !important;
-        max-width: 680px;
-      }
     }
 
     @media (max-width: 900px) {
@@ -231,7 +162,8 @@
       }
 
       .beyonce-image img,
-      .nicki-image img {
+      .nicki-image img,
+      .rihanna-image img {
         margin: 0 auto;
       }
     }
@@ -278,29 +210,17 @@
     </section>
 
     <!-- RIHANNA SECTION -->
-    <section class="rihanna-section">
-      <h2>RIHANNA</h2>
-      <div class="rihanna-images-grid">
-        <img
-          class="image1"
-          src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/12269220-0-image-a-47_1555275733883.png"
-          alt="Rihanna 1"
-        />
-        <div class="row-top">
-          <img
-            src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/9a6f2655a0302dc62acad32d5e13d983.jpg"
-            alt="Rihanna 2"
-          />
-          <img
-            src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/o.4412.jpg"
-            alt="Rihanna 3"
-          />
-        </div>
+    <section class="artist-section rihanna-section">
+      <div class="artist-text" style="text-align: left;">
+        <h2>RIHANNA</h2>
+        <p>FROM ISLAND TO ICON.</p>
+        <a href="rihanna.html" class="artist-button">ARTIST PROFILE</a>
       </div>
-
-      <div class="rihanna-subtext">FROM ISLAND TO ICON.</div>
-      <a href="rihanna.html" class="artist-button">ARTIST PROFILE</a>
+      <div class="rihanna-image">
+        <img src="https://raw.githubusercontent.com/EdwardsJada/4THECULTURE/main/images/rihanna-campaign-image-1553866273.jpg" alt="Rihanna" />
+      </div>
     </section>
+
   </main>
 
   <footer>

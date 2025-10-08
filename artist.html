@@ -61,8 +61,8 @@
 
     main.container {
       padding-top: 80px;
-      padding-left: 60px; /* increased padding left */
-      padding-right: 60px; /* increased padding right */
+      padding-left: 60px;
+      padding-right: 60px;
       max-width: 1400px;
       margin: 0 auto;
     }
@@ -72,17 +72,13 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 80px;
+      gap: 80px; /* Increased spacing between text and image */
     }
 
     .beyonce-section,
     .nicki-section {
-      justify-content: space-between;
-      max-width: 680px;
+      max-width: 1400px;
       margin: 0 auto 80px auto;
-    }
-
-    .nicki-section {
-      margin-left: 0; /* align with container left padding */
     }
 
     .rihanna-section {
@@ -145,11 +141,11 @@
       margin: 0 auto;
     }
 
-    /* Rihanna images grid with alignment */
+    /* Rihanna images grid */
     .rihanna-images-grid {
       display: grid;
       grid-template-columns: 680px auto;
-      column-gap: calc(60px); /* match container padding */
+      column-gap: 60px;
       justify-content: center;
       align-items: start;
       margin-top: 16px;
@@ -172,7 +168,6 @@
     }
 
     .rihanna-images-grid .image1 {
-      /* Align vertically with Nicki Minaj image */
       justify-self: start;
     }
 
@@ -182,7 +177,6 @@
       height: 435px;
     }
 
-    /* Positioning for image2 aligned with Beyoncé image right edge */
     .rihanna-images-grid .row-top img:nth-child(2) {
       align-self: start;
       justify-self: end;
@@ -207,18 +201,38 @@
         padding-left: 40px;
         padding-right: 40px;
       }
+
       .rihanna-images-grid {
         grid-template-columns: 1fr;
         gap: 20px;
       }
+
       .rihanna-images-grid .row-top,
       .rihanna-images-grid .row-bottom {
         justify-content: center;
       }
+
       .rihanna-images-grid img {
         width: 100% !important;
         height: auto !important;
         max-width: 680px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .artist-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .artist-text {
+        text-align: center !important;
+      }
+
+      .beyonce-image img,
+      .nicki-image img {
+        margin: 0 auto;
       }
     }
 
